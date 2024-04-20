@@ -2,6 +2,16 @@
 
 <div class="cards_container">
     <div class="center_container">
+        <ng-container *ngIf="categories$ | async as cat;else loading">
+            <ng-container *ngFor="let element of cat">
+                <button type="button" [routerLink]="'/category/' + element" class="btn btn-light text-capitalize">{{element}}</button>
+            </ng-container>
+        </ng-container>
+    </div>
+</div>
+
+<div class="cards_container">
+    <div class="center_container">
         <ng-container *ngIf="data$ | async as products;else loading">
             <ng-container *ngFor="let element of products">
                 <app-card [card] = "element"> </app-card>
