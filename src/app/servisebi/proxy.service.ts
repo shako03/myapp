@@ -8,12 +8,22 @@ import { Observable } from 'rxjs';
 })
 export class ProxyService {
 
-  constructor(private http:HttpClient ) { }
+  constructor(private http: HttpClient) { }
 
-   getAllCards():Observable<any>{
-   return this.http.get('https://fakestoreapi.com/products')
-   }
-}
+  getAllCards(): Observable<any> {
+    return this.http.get('https://fakestoreapi.com/products')
+  }
+  getAllCategories(): Observable<any> {
+    return this.http.get('https://fakestoreapi.com/products/categories')
+  }
+
+  getAllCardsByCategory(categoryId: String): Observable<any> {
+    const url = `https://fakestoreapi.com/products/category/${categoryId}`;
+    return this.http.get(url);
+  }
   
+
+}
+
 
 

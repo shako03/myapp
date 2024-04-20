@@ -6,6 +6,7 @@ import { BasketComponent } from './components/basket/basket.component';
 
 const routes: Routes = [
   {path:"" , component:MainComponent }, //როცა ცარიელიათქო ჩაიტვირთოს ესა და ეს თქო
+  {path:"category/:id" , component:MainComponent},
   {path:"basket" , component:BasketComponent}
 ];
 
