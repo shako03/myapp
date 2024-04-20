@@ -4,10 +4,18 @@
     <div class="center_container">
         <ng-container *ngIf="categories$ | async as cat;else loading">
             <ng-container *ngFor="let element of cat">
-                <button type="button" [routerLink]="'/category/' + element" class="btn btn-light text-capitalize">{{element}}</button>
+                <button type="button" [routerLink]="'/category/' + element" class="btn  text-capitalize" [class]="selectedCategory$==element ? ' btn-primary':'btn-light'">{{element}}</button>
             </ng-container>
         </ng-container>
+        
+        <!-- TODO: ახალის და ძველის დალაგება -->
+        <span>Order</span>
+        <div class="btn-group" role="group" aria-label="Basic outlined example">
+            <button type="button" class="btn btn-primary">New</button>
+            <button type="button" class="btn btn-outline-primary">Old</button>
+          </div>
     </div>
+    
 </div>
 
 <div class="cards_container">

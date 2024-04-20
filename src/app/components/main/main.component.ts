@@ -17,10 +17,15 @@ export class MainComponent implements OnInit {
   constructor(private proxyService: ProxyService, private route: ActivatedRoute) { }
   data$!: Observable<any>
   categories$!: Observable<any>
+  selectedCategory$!: string
+  // sortedData: any[] = [];
+  // sortAscending = true;
+
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
       let categoryId = params.get('id');
+      this.selectedCategory$ = categoryId ? categoryId : '';
       if (categoryId) {
         this.data$ = this.proxyService.getAllCardsByCategory(categoryId)
       } else {
