@@ -1,0 +1,19 @@
+<div class="uzenaesi-card-container">
+
+  <div class="card-main-container">
+    <div class="card_title_container">
+      <h3>{{card.title}}</h3>
+    </div>
+    <div class="card_image_container">
+      <img width="100" [src]="card.image">
+    </div>
+    <div class="card_price_container">
+      <p>{{card.price | currency}}</p>
+    </div>
+    
+    <button (click)="addCardInBasket()" mat-raised-button color="primary">add to cart</button>
+    
+    <button mat-raised-button (click)="seeDetails()">show details</button>
+    
+  </div>
+</div>

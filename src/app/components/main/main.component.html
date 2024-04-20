@@ -1,0 +1,21 @@
+<app-carousel-menu></app-carousel-menu>
+
+<div class="cards_container">
+    <div class="center_container">
+        <ng-container *ngIf="data$ | async as products;else loading">
+            <ng-container *ngFor="let element of products">
+                <app-card [card] = "element"> </app-card>
+            </ng-container>
+        </ng-container>
+    </div>
+</div>
+
+
+
+<ng-template #loading>
+    <h3 style="text-align: center;">loading...</h3>
+</ng-template>
+
+
+
+<app-footer></app-footer>

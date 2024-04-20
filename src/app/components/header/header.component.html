@@ -1,0 +1,29 @@
+<div class="main-header-container">
+    <mat-toolbar>
+        <button  mat-icon-button routerLink ="/" style="background-color: rgb(248, 2, 2);" >
+            <mat-icon>home</mat-icon>
+        </button>
+        
+        <div class="marcxena_container">
+            <button  mat-icon-button [matMenuTriggerFor]="menu" [matBadge]="basketElementCount" matBadgeColor="warn" style="background-color: blue;"> 
+                <mat-icon>
+                    shopping_cart
+                </mat-icon>
+            </button> 
+            
+            <button *ngif="basketElementCount == 0" mat-icon-button [matMenuTriggerFor]="menu">
+                <mat-icon>
+                    shopping_cart
+                </mat-icon>
+            </button> 
+            
+            <mat-menu #menu="matMenu">
+                <div class="container">
+                    <button mat-menu-item routerLink="/basket" >კალათის ნახვა
+                    </button> 
+                    
+                </div>
+            </mat-menu>
+        </div>
+    </mat-toolbar>
+</div>
