@@ -16,6 +16,13 @@ export class ProxyService {
   getAllCategories(): Observable<any> {
     return this.http.get('https://fakestoreapi.com/products/categories')
   }
+
+  getAllCardsByCategory(categoryId: String): Observable<any> {
+    const url = `https://fakestoreapi.com/products/category/${categoryId}`;
+    return this.http.get(url);
+  }
+  
+
 }
 
 
