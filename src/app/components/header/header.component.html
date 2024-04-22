@@ -1,11 +1,11 @@
 <div class="main-header-container">
     <mat-toolbar>
-        <button  mat-icon-button class="text-white" routerLink ="/" style="background-color: rgb(248, 2, 2);" >
+        <button  mat-icon-button class="text-white" routerLink ="/" style="background-color: gray;" >
             <mat-icon>home</mat-icon>
         </button>
         
         <div class="marcxena_container">
-            <button  mat-icon-button [matMenuTriggerFor]="menu" [matBadge]="basketElementCount" matBadgeColor="warn" style="background-color: blue;"> 
+            <button  mat-icon-button  class="text-white" [matMenuTriggerFor]="menu" [matBadge]="basketElementCount" matBadgeColor="warn" style="background-color: gray;"> 
                 <mat-icon>
                     shopping_cart
                 </mat-icon>
@@ -15,6 +15,7 @@
                 <mat-icon>
                     shopping_cart
                 </mat-icon>
+                
             </button> 
             
             <mat-menu #menu="matMenu">
