@@ -18,6 +18,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatBadgeModule} from '@angular/material/badge';
 import { FooterComponent } from './components/footer/footer.component';
 import { CarouselMenuComponent } from './components/carousel-menu/carousel-menu.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { CarouselMenuComponent } from './components/carousel-menu/carousel-menu.
     MatMenuModule,
     MatBadgeModule,
     MatDialogModule,
+    FontAwesomeModule,
 
    
     
