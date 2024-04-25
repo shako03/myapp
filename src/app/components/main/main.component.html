@@ -10,23 +10,24 @@
         
         <!-- : ახალის და ძველის დალაგება -->
         
-        <div class="btn-group" role="group" aria-label="Basic outlined example">
+        <!-- <div class="btn-group" role="group" aria-label="Basic outlined example">
             <button type="button" class="btn btn-primary">New</button>
             <button type="button" class="btn btn-outline-primary">Old</button>
-          </div>
+          </div> -->
     </div>
     
 </div>
 
 <div class="cards_container">
     <div class="center_container">
-        <ng-container *ngIf="data$ | async as products;else loading">
-            <ng-container *ngFor="let element of products">
-                <app-card [card] = "element"> </app-card>
+            <ng-container *ngIf="data$ | async as products;else loading">
+                <ng-container *ngFor="let element of products">
+                    <app-card [card] = "element"> </app-card>
+                </ng-container>
             </ng-container>
-        </ng-container>
+        </div> 
     </div>
-</div>
+
 
 
 

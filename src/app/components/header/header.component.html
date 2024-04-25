@@ -7,16 +7,17 @@
             </button>
             
             <div class="marcxena_container">
-                <button  mat-icon-button  class="text-white" [matMenuTriggerFor]="menu" [matBadge]="basketElementCount" matBadgeColor="warn" style="background-color: gray;"> 
+                <button  mat-icon-button  class="text-white" [matMenuTriggerFor]="menu" [matBadge]="basketElementCount" matBadgeColor="warn" style="background-color: gray; margin-right: 10px;"> 
                     <mat-icon>
                         shopping_cart
                     </mat-icon>
                 </button> 
+                <h3>RandomShop</h3>
                 
                 <button *ngif="basketElementCount == 0" mat-icon-button [matMenuTriggerFor]="menu">
-                    <mat-icon>
+                     <mat-icon>
                         shopping_cart
-                    </mat-icon>
+                    </mat-icon> 
                     
                 </button> 
                 
