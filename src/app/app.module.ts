@@ -19,6 +19,9 @@ import {MatBadgeModule} from '@angular/material/badge';
 import { FooterComponent } from './components/footer/footer.component';
 import { CarouselMenuComponent } from './components/carousel-menu/carousel-menu.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FilterInputComponent } from './components/filter-input/filter-input.component';
+import {MatInputModule} from '@angular/material/input';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +33,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     BasketComponent,
     FooterComponent,
     CarouselMenuComponent,
-
+    FilterInputComponent,
    
   ],
   imports: [
@@ -42,6 +45,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     MatTableModule,
     MatIconModule,
     MatToolbarModule,
+    MatInputModule,
     MatMenuModule,
     MatBadgeModule,
     MatDialogModule,

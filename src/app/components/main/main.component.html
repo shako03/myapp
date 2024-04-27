@@ -1,7 +1,9 @@
 <app-carousel-menu></app-carousel-menu>
 
+
+<h2 style="display: flex; align-items: center; justify-content: center; margin-top: 30px; text-decoration: overline double; " >Categories</h2> 
 <div class="cards_container">
-    <div class="center_container">
+    <div class="center_container" style="border: 1px solid black; width: auto; border-radius: 3px;">
         <ng-container *ngIf="categories$ | async as cat;else loading">
             <ng-container *ngFor="let element of cat">
                 <button type="button" [routerLink]="'/category/' + element" class="btn  text-capitalize" [class]="selectedCategory$==element ? ' btn-primary':'btn-light'">{{element}}</button>
