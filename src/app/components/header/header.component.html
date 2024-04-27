@@ -1,4 +1,5 @@
 
+
 <div class="main-header-container">
     <mat-toolbar>
     
@@ -6,6 +7,33 @@
             <button  mat-icon-button class="text-white" routerLink ="/" style="background-color: gray;" >
                 <mat-icon>home</mat-icon>
             </button>
+
+
+
+
+
+
+
+
+
+           <div class="filter-input-div">         
+               <app-filter-input (textEmitter)="textEmitterSub($event)"></app-filter-input>
+           </div> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             <div class="marcxena_container">
                 <button  mat-icon-button  class="text-white" [matMenuTriggerFor]="menu" [matBadge]="basketElementCount" matBadgeColor="warn" style="background-color: gray; margin-right: 10px;"> 
                     <mat-icon>
@@ -18,7 +46,6 @@
                      <mat-icon>
                         shopping_cart
                     </mat-icon> 
-                    
                 </button> 
                 
                 <mat-menu #menu="matMenu">

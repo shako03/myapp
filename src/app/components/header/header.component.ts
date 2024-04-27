@@ -1,5 +1,6 @@
 import { Component , OnInit } from '@angular/core';
 import { BasketService } from 'src/app/servisebi/basket.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -9,6 +10,7 @@ import { BasketService } from 'src/app/servisebi/basket.service';
 export class HeaderComponent implements OnInit {
 basketElementCount:number = 0;
 constructor(private basketservice:BasketService){}
+SearchText!:string
 ngOnInit(): void {
   this.basketservice.addCardInBasketEmmiter.subscribe((array:Array<any>)=>{
     this.basketElementCount = array.length;
@@ -16,5 +18,8 @@ ngOnInit(): void {
   this.basketservice.deleteCardEmitter.subscribe((array:Array<any>)=>{
     this.basketElementCount = array.length;
   })
+}
+textEmitterSub(event:string){
+  this.SearchText = event
 }
 }

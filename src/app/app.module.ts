@@ -21,6 +21,7 @@ import { CarouselMenuComponent } from './components/carousel-menu/carousel-menu.
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FilterInputComponent } from './components/filter-input/filter-input.component';
 import {MatInputModule} from '@angular/material/input';
+import { FilterPipePipe } from './pipes/filter-pipe.pipe';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import {MatInputModule} from '@angular/material/input';
     FooterComponent,
     CarouselMenuComponent,
     FilterInputComponent,
+    FilterPipePipe,
    
   ],
   imports: [

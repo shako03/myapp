@@ -17,7 +17,7 @@ export class MainComponent implements OnInit {
   selectedCategory$!: string
   // sortedData: any[] = [];
   // sortAscending = true;
-
+SearchText!:string
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
