@@ -2,14 +2,29 @@
 
   <div class="card-main-container">
     <div class="card_title_container">
-      <h3>{{card.title}}</h3>
+      <h4>{{card.title}}</h4>
     </div>
     <div class="card_image_container">
-      <img width="100" [src]="card.image">
+      <img width="70" [src]="card.image">
     </div>
     <div class="card_price_container">
       <p>{{card.price | currency}}</p>
     </div>
+
+ <!-- reitingi -->
+    <div class="rating" (mouseleave)="resetStar(card)">
+      <input type="radio" [id]="'star5-' + card.id" name="rating-{{card.id}}" value="5" (mouseenter)="hoverStar(card, 5)">
+      <label [for]="'star5-' + card.id"></label>
+      <input type="radio" [id]="'star4-' + card.id" name="rating-{{card.id}}" value="4" (mouseenter)="hoverStar(card, 4)">
+      <label [for]="'star4-' + card.id"></label>
+      <input type="radio" [id]="'star3-' + card.id" name="rating-{{card.id}}" value="3" (mouseenter)="hoverStar(card, 3)">
+      <label [for]="'star3-' + card.id"></label>
+      <input type="radio" [id]="'star2-' + card.id" name="rating-{{card.id}}" value="2" (mouseenter)="hoverStar(card, 2)">
+      <label [for]="'star2-' + card.id"></label>
+      <input type="radio" [id]="'star1-' + card.id" name="rating-{{card.id}}" value="1" (mouseenter)="hoverStar(card, 1)">
+      <label [for]="'star1-' + card.id"></label>
+    </div>
+
     
     <button (click)="addCardInBasket()" mat-raised-button color="primary">add to cart</button>
     

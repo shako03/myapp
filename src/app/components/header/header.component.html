@@ -42,7 +42,7 @@
                 </button> 
                 <h3>RandomShop</h3>
                 
-                <button *ngif="basketElementCount == 0" mat-icon-button [matMenuTriggerFor]="menu">
+                <button *ngIf="basketElementCount == 0" mat-icon-button [matMenuTriggerFor]="menu">
                      <mat-icon>
                         shopping_cart
                     </mat-icon> 

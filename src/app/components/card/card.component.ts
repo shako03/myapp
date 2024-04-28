@@ -38,6 +38,13 @@ modal.afterClosed()
 .subscribe((res) => {
   console.log(res)
 })
+}
+hoverStar(card: any, value: number) {
+  console.log(`Hovered star ${value} for card ${card.id}`);
+}
 
+resetStar(card: any) {
+  console.log(`Reset stars for card ${card.id}`);
 }
 }
+

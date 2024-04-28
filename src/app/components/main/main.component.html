@@ -23,7 +23,7 @@
 <div class="cards_container">
     <div class="center_container">
             <ng-container *ngIf="data$ | async as products;else loading">
-                <ng-container *ngFor="let element of products | filterPipe:SearchText">
+                <ng-container *ngFor="let element of products ">
                     <app-card [card] = "element"> </app-card>
                 </ng-container>
             </ng-container>

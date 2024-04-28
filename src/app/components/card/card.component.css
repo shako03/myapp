@@ -29,3 +29,30 @@
    
 
 }
+.rating {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    text-align: center;
+  }
+  
+  .rating input {
+    display: none;
+  }
+  
+  .rating label {
+    font-size: 40px;
+    color: #ccc;
+    cursor: pointer;
+  }
+  
+  .rating label:before {
+    content: '\2605';
+  }
+  
+  .rating input:checked ~ label,
+  .rating input:hover ~ label,
+  .rating label:hover,
+  .rating input:checked ~ label:hover ~ label {
+    color: gold;
+  }
+  

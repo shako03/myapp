@@ -20,6 +20,7 @@ export class MainComponent implements OnInit {
 SearchText!:string
 
   ngOnInit(): void {
+    this.data$=this.proxyService.getAllCards()
     this.route.paramMap.subscribe(params => {
       let categoryId = params.get('id');
       this.selectedCategory$ = categoryId ? categoryId : '';
