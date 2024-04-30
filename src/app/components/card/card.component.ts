@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog'
 import { DetailsComponent } from '../details/details.component';
 import { BasketService } from 'src/app/servisebi/basket.service';
+import { ProxyService } from 'src/app/servisebi/proxy.service';
 
 
 
@@ -46,5 +47,9 @@ hoverStar(card: any, value: number) {
 resetStar(card: any) {
   console.log(`Reset stars for card ${card.id}`);
 }
+addNewProduct() {
 }
+}
+
+
 

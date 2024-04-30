@@ -17,6 +17,8 @@ export interface PeriodicElement {
 export class BasketComponent implements OnInit {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource!:Array<any>
+  TotalPriceVariable:number = 0
+
 
 
   constructor(private basketService:BasketService){}
@@ -27,12 +29,22 @@ export class BasketComponent implements OnInit {
       console.log(newArray)
       this.dataSource = newArray;
     })
+    this.TotalPrice()
     }
       deleteCard(cardId:number){
         this.basketService.deleteCardFromBasket(cardId)
+        this.TotalPrice()
 
      }
+
+     TotalPrice(){
+     let asd = this.basketService.basketArray.reduce((previuse,current) => {
+     return previuse + current.price
+    },0)
+    this.TotalPriceVariable=asd
+  }
 }
+
 
 
 

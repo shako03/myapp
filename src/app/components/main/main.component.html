@@ -1,5 +1,10 @@
 <app-carousel-menu></app-carousel-menu>
 
+<div class="filter-input-container">
+    <app-filter-input (textEmitter)="textEmitterSub($event)"></app-filter-input>
+</div>      
+
+
 
 <h2 style="display: flex; align-items: center; justify-content: center; margin-top: 30px; text-decoration: overline double; " >Categories</h2> 
 <div class="cards_container">
@@ -23,7 +28,7 @@
 <div class="cards_container">
     <div class="center_container">
             <ng-container *ngIf="data$ | async as products;else loading">
-                <ng-container *ngFor="let element of products ">
+                <ng-container *ngFor="let element of products | filterPipe:SearchText">
                     <app-card [card] = "element"> </app-card>
                 </ng-container>
             </ng-container>

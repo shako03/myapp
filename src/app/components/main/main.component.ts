@@ -18,7 +18,6 @@ export class MainComponent implements OnInit {
   // sortedData: any[] = [];
   // sortAscending = true;
 SearchText!:string
-
   ngOnInit(): void {
     this.data$=this.proxyService.getAllCards()
     this.route.paramMap.subscribe(params => {
@@ -33,4 +32,7 @@ SearchText!:string
     this.categories$ = this.proxyService.getAllCategories();
   }
 
+  textEmitterSub(event:string){
+   this.SearchText = event
+  } 
 }

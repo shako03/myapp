@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 export class HeaderComponent implements OnInit {
 basketElementCount:number = 0;
 constructor(private basketservice:BasketService){}
-SearchText!:string
+// SearchText!:string
 ngOnInit(): void {
   this.basketservice.addCardInBasketEmmiter.subscribe((array:Array<any>)=>{
     this.basketElementCount = array.length;
@@ -18,8 +18,5 @@ ngOnInit(): void {
   this.basketservice.deleteCardEmitter.subscribe((array:Array<any>)=>{
     this.basketElementCount = array.length;
   })
-}
-textEmitterSub(event:string){
-  this.SearchText = event
 }
 }
