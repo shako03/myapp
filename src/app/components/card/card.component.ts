@@ -18,7 +18,7 @@ constructor(private matDialog:MatDialog,private basketService:BasketService){}
 
 
 addCardInBasket():void{
-this.basketService.addCardInBasket,(this.card)
+this.basketService.addCardInBasket(this.card)
 }
 
 
@@ -50,6 +50,3 @@ resetStar(card: any) {
 addNewProduct() {
 }
 }
-
-
-
